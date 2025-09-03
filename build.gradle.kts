@@ -1,3 +1,5 @@
+// 플러그인
+// Spring Boot, Kotlin, JPA 등
 plugins {
     kotlin("jvm") version "1.9.25"
     kotlin("plugin.spring") version "1.9.25"
@@ -20,6 +22,9 @@ repositories {
     mavenCentral()
 }
 
+
+// 의존성
+// Spring Boot, Spring Data JPA, Mustache, H2 Database, Jackson, Kotlin Reflect 등
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-mustache")
@@ -33,6 +38,9 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
+
+// 컴파일러 옵션
+// - Xjsr305=strict : null 체크를 엄격하게 검사 (null-safety)
 kotlin {
     compilerOptions {
         freeCompilerArgs.addAll("-Xjsr305=strict")

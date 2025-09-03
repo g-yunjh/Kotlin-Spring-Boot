@@ -1,5 +1,6 @@
 package example.blog
 
+import org.springframework.boot.Banner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
@@ -7,5 +8,7 @@ import org.springframework.boot.runApplication
 class BlogApplication
 
 fun main(args: Array<String>) {
-    runApplication<BlogApplication>(*args)
+    runApplication<BlogApplication>(*args) {
+        setBannerMode(Banner.Mode.OFF) // 애플리케이션 사용자 정의 (배너 제거)
+    }
 }
